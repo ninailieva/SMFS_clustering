@@ -1,0 +1,23 @@
+Dataset_Mixed.txt		# Input data filename
+n_cont			-1	# Minimum number of points with force>0, used to detect the starting point in the contact part
+sigma_noise		-1      # Standard deviation of the noise
+sigma_cut		-1	# Threshold used for non-contact part removal = n*sigma_noise; put a postive number n
+sigma_tail		-1	# Threshold used to detect spurious traces = n*sigma_noise; put a postive number n
+len_min		        -1      # Threshold on the trace length used to discard short traces [nm]
+abnormal_f              -1      # Force values above abnormal_f are considered abnormal
+abnormal_x              -1      # Extension values above abnormal_x are considered abnormal
+dx_interp		-1      # Grid width used in trace interpolation [nm]
+l_p		        -1      # Persistence length [nm]
+F_min                   -1      # Lower bound limit of the WLC force range
+F_max			-1      # Upper bound limit of the WLC force range
+lim_p_max               -1      # Peaks in the Lc histogram above this value are considered relevant
+peak_width              -1      # Used in score assignation: score is assigned to points within this peak width
+bin_width	        -1      # Lc histogram bin width  
+score_thresh	        -1      # The threshold on the ratio between global score and trace length 
+delta1	                -1      # Gap penalty in the alignment, applied in the first 10 nm of a trace
+delta2	                -1      # Gap penalty in the alignment, applied after the first 10 nm of a trace
+F_scoring	        -1      # Match/mismatch threshold used to compute the similarity score in the distance = n*sigma_noise; put a postive number n
+peaks_diff	        -1      # Distances are computed only between traces that differ in peaks by no more than this number
+len_diff                -1      # Distances are computed only between traces that differ in length by no more than this number
+kNN		        -1      # Number of nearest neighbours in the density estimator
+r_cut		        -1      # Cutoff distance used in the clustering to determine the cluster core
