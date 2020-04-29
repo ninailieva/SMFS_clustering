@@ -19,19 +19,23 @@ To run the code:
 
 The generated output file contains a list of the used parameter values followed by the actual results divided in columns containing the following information:
 
-col1=*Trace number*;
+col1="tr ";
 
-col2=*Length*;
+col2=*Trace number*;
 
-col3=*Quality score*;
+col3=*Length*;
 
-col4=*Number of peaks*;
+col4=*Quality score*;
 
-col5=*Cluster number*;
+col5=*Number of peaks*;
 
-col6=*Distance from the cluster center*;
+col6=*Cluster number*;
 
-In the very end of the output file, information about the clusters is printed consistent with the one in Table 2 in our reference paper.
+col7=*Cluster number without filters*;
+
+col8=*Distance from the cluster center*;
+
+In the very end of the output file, information about the clusters is printed. Each cluster is descirbed in terms of cluster center, size and members (cluster core traces).
 
 The values of the input parameters in **input.txt** are the default ones.
 
@@ -42,13 +46,13 @@ Dataset Mixed contains 4 groups of traces corresponding to the unfolding of 4 di
 * Group 2 - unfolding of a tandem globular polyprotein (Alpha3D + 4xNUG2) (Heenan and Perkins, Biophys J, 2018)
 * Group 3 and Group 4 correspond to the unfolding of two unidentified proteins from AFM-SMFS experiments in the plasma membrane of the rod outer segment.
 
-The total number of clusters you should obtain for Dataset Mixed is 7. Two of them: cluster number 5 and cluster number 7 contain one member only: the cluster center. We exclude these clusters from the analysis and 5 clusters remain.
+The total number of clusters you should obtain for Dataset Mixed is 5. 
 
 The traces from the 4 groups in the dataset are distributed in our clusters as follows:
 * cluster 1 - contains the traces from Group 2
 * cluster 2 - contains the traces from Group 1
-* cluster 3 - contains the traces from Group 4
-* cluster 4 - contains the traces from Group 3
-* cluster 5 - also contains traces from Group 3 
+* cluster 3, 4, 5 - contain the traces from Group 3
 
-Both clusters 4 and 5 bear the same force pattern. Since the core of cluster 4 is more robust we consider cluster 4 to be the cluster matching the traces from Group 3. 
+The traces from group 4 do not belong to the core of any of the five clusters indicating that they are not similar enough according to the criteria implemented in the code. 
+
+For more information you can check our reference paper.
