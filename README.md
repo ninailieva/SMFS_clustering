@@ -5,6 +5,7 @@ We provide the source code of our method for clustering heterogeneous AFM-SMFS d
 
 The files included in this repository are:
 * **cluster_traces.cpp** - the source code
+* **cluster_tracesv23_3_20-win64_static_O2.exe** - a static executable for Windows
 * **input.txt** - contains the input parameters of the algorithm
 * **Dataset_Mixed.txt** - test dataset containing four groups of traces corresponding to the unfolding of four different proteins
 * **reference_output.txt** - the correct output results for Dataset Mixed
@@ -16,6 +17,8 @@ icc -std=c++0x -O3 cluster_traces.cpp -fopenmp -o cluster_traces.x
 To run the code:
 
 ./cluster_traces.x input.txt > output.txt
+
+The code is also compatible with the gnu compiler.
 
 The generated output file contains a list of the used parameter values followed by the actual results divided in columns containing the following information:
 
