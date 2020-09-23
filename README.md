@@ -58,4 +58,5 @@ The traces from the 4 groups in the dataset are distributed in our clusters as f
 
 The traces from group 4 do not belong to the core of any of the five clusters indicating that they are not similar enough according to the criteria implemented in the code. 
 
-For more information you can check our reference paper.
+For more information you can check our reference paper:
+[1] Ilieva, N. I., Galvanetto, N., Allegra, M., Brucale, M., & Laio, A. (2020). Automatic classification of single-molecule force spectroscopy traces from heterogeneous samples. Bioinformatics.
